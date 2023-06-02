@@ -1,0 +1,17 @@
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\Repository.deps.json
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\Repository.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\BusinessObjects.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\DataAccess.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\bin\Debug\net6.0-windows\BusinessObjects.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.csproj.AssemblyReference.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.AssemblyInfoInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.AssemblyInfo.cs
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.csproj.CoreCompileInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.csproj.CopyComplete
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\refint\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\Repository.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\PhamMinhNhat_SE1605_A02\Repository\obj\Debug\net6.0-windows\ref\Repository.dll
