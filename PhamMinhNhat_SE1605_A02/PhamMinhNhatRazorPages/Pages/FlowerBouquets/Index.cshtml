@@ -1,0 +1,43 @@
+﻿@page
+@model PhamMinhNhatRazorPages.Pages.FlowerBouquets.IndexModel
+@{
+}
+
+<h1 class="mb-3">List of FlowerBouquets</h1>
+@if (Model.FlowerBouquets != null && Model.FlowerBouquets.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Unit Price</th>
+                <th>Units In Stock</th>
+                <th>FlowerBouquetStatus</th>
+                <th>Category</th>
+                <th>Supplier</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.FlowerBouquets)
+            {
+                <tr>
+                    <td>@item.FlowerBouquetId</td>
+                    <td>@item.FlowerBouquetName</td>
+                    <td>@item.Description</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.UnitsInStock</td>
+                    <td>@item.FlowerBouquetStatus</td>
+                    <td>@item.Category.CategoryName</td>
+                    <td>@item.Supplier.SupplierName</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Empty Flower Bouquet</p>
+}

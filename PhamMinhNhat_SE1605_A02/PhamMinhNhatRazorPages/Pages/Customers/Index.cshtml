@@ -3,3 +3,35 @@
 @{
 }
 <h1 class="mb-3">List of Customers</h1>
+@if(Model.Customers != null && Model.Customers.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Birthday</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.Customers)
+            {
+                <tr>
+                    <td>@item.CustomerId</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.Email</td>
+                    <td>@item.City</td>
+                    <td>@item.Country</td>
+                    <td>@item.Birthday</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Empty Customers</p>
+}

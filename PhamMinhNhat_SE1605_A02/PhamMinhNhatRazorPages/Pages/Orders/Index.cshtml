@@ -1,0 +1,37 @@
+﻿@page
+@model PhamMinhNhatRazorPages.Pages.Orders.IndexModel
+@{
+}
+<h1 class="mb-3">List of Orders</h1>
+@if (Model.Orders != null && Model.Orders.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Customer Id</th>
+                <th>Order Date</th>
+                <th>Shipped Date</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Orders)
+            {
+                <tr>
+                    <td>@item.OrderId</td>
+                    <td>@item.CustomerId</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.ShippedDate</td>
+                    <td>@item.Total</td>
+                    <td>@item.OrderStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Empty Order</p>
+}

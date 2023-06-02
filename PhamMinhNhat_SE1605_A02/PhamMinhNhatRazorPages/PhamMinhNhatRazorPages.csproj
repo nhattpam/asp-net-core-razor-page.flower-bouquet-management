@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\FlowerBouquets\" />
-    <Folder Include="Pages\Orders\" />
     <Folder Include="Pages\Suppliers\" />
   </ItemGroup>
 

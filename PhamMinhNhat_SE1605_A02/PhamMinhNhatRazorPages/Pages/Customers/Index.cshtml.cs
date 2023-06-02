@@ -23,6 +23,7 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
             string loginMem = HttpContext.Session.GetString("loginMem");
             if(loginMem != null && loginMem.Equals("Admin"))
             {
+                Customers = List();
                 return Page();
             }
             return RedirectToPage("/Index");
