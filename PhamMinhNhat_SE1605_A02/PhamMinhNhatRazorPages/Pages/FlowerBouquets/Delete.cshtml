@@ -1,0 +1,12 @@
+﻿@page "{id}"
+@model PhamMinhNhatRazorPages.Pages.FlowerBouquets.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Wanna delete @Model.FlowerBouquet.FlowerBouquetName?</h1>
+<form method="post">
+    <input type="text" asp-for="@Model.FlowerBouquet.FlowerBouquetId" hidden/>
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <a class="btn btn-dark" asp-page="/FlowerBouquets/Index">No</a>
+</form>

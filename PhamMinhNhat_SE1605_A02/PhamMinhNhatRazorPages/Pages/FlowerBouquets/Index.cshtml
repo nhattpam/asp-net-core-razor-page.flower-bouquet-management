@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model PhamMinhNhatRazorPages.Pages.FlowerBouquets.IndexModel
 @{
 }
@@ -17,6 +17,7 @@
                 <th>FlowerBouquetStatus</th>
                 <th>Category</th>
                 <th>Supplier</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +32,10 @@
                     <td>@item.FlowerBouquetStatus</td>
                     <td>@item.Category.CategoryName</td>
                     <td>@item.Supplier.SupplierName</td>
-                    
+                    <td>
+                       <a class="btn btn-warning" href="/FlowerBouquets/Edit/@item.FlowerBouquetId">Edit</a>
+                       <a class="btn btn-danger" href="/FlowerBouquets/Delete/@item.FlowerBouquetId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>

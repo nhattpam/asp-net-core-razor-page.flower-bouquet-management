@@ -1,6 +1,7 @@
 using DataAccess.Repository.FlowerBouquetRepo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Windows;
 using ViewModel;
 
 namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
@@ -26,6 +27,8 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
             return RedirectToPage("/Index");
         }
 
+
+
         public IEnumerable<FlowerBouquetViewModel> List()
         {
             var flowers = flowerBouquetRepository.GetFlowerBouquetsList();
@@ -49,6 +52,8 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
             return dtos;
         }
 
+
+     
 
     }
 }
