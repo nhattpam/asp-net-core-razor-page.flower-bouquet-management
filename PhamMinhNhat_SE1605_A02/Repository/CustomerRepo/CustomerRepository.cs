@@ -39,5 +39,10 @@ namespace Repository.CustomerRepo
         {
             CustomerDAO.Instance.Update(c);
         }
+
+        public Customer GetCustomerByName(string customerName)
+        {
+            return CustomerDAO.Instance.GetCustomerByName(customerName);
+        }
     }
 }

@@ -80,24 +80,7 @@ namespace DataAccess
             return customers;
         }
 
-        public IEnumerable<Customer> GetCustomersList2()
-        {
-            IEnumerable<Customer> customers = null;
-
-            try
-            {
-                var context = new FUFlowerBouquetManagementContext();
-                // Get From Database
-                customers = context.Customers;
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-            return customers;
-        }
+      
 
         public Customer Login(string email, string password)
         {
@@ -106,13 +89,7 @@ namespace DataAccess
             return customer;
         }
 
-        public Customer Login2(string email, string password)
-        {
-            IEnumerable<Customer> customers = GetCustomersList2();
-            Customer customer = customers.SingleOrDefault(mb => mb.Email.Equals(email) && mb.Password.Equals(password));
-            return customer;
-        }
-
+    
         public Customer GetCustomer(int customerId)
         {
             Customer cus = null;
@@ -206,6 +183,26 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
 
+        }
+
+        //check customer id by name
+        public Customer GetCustomerByName(string customerName)
+        {
+            Customer cus = null;
+
+            try
+            {
+
+                var context = new FUFlowerBouquetManagementContext();
+                cus = context.Customers.SingleOrDefault(f => f.CustomerName.Equals(customerName.Trim())); 
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return cus;
         }
 
     }

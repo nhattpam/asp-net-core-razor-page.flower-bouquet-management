@@ -6,10 +6,16 @@ namespace PhamMinhNhatRazorPages.Pages
 {
     public class AdminScreenModel : PageModel
     {
-        public void OnGet()
+        
+        public IActionResult OnGet()
         {
+            //check admin or null
             string loginMem = HttpContext.Session.GetString("loginMem");
-            //MessageBox.Show(name);
+            if (loginMem != null && loginMem.Equals("Admin"))
+            {
+                return Page();
+            }
+            return RedirectToPage("/Index");
         }
     }
 }

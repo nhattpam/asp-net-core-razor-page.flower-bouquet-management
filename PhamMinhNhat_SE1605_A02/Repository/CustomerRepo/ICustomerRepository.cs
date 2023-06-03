@@ -14,6 +14,9 @@ namespace Repository.CustomerRepo
 
         public Customer GetCustomerById(int id);
 
+        //get by name
+        public Customer GetCustomerByName(string customerName);
+
         public void DeleteCustomer(int id);
         public void AddCustomer(Customer c);
         public void Update(Customer c);
