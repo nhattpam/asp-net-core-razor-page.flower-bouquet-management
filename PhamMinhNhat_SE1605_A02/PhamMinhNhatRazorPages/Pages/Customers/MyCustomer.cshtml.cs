@@ -20,9 +20,10 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
         {
             //check customer or null
             string loginMem = HttpContext.Session.GetString("loginMem");
+            int loginMemId = Int32.Parse(HttpContext.Session.GetString("loginMemId"));
             if (loginMem != null && !loginMem.Equals("Admin"))
             {
-                Customer c = customerRepository.GetCustomerByName(loginMem);
+                Customer c = customerRepository.GetCustomerById(loginMemId);
                 if(c != null)
                 {
                     CustomerModel.CustomerId = c.CustomerId;
