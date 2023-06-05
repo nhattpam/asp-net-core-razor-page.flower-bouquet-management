@@ -10,8 +10,9 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
     public class MyCustomerModel : PageModel
     {
         public ICustomerRepository customerRepository { get; set; }
+        [BindProperty]
         public CustomerViewModel CustomerModel { get; set; }
-        public MyCustomerModel() 
+        public MyCustomerModel()
         {
             customerRepository = new CustomerRepository();
             CustomerModel = new CustomerViewModel();
@@ -24,12 +25,12 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
             if (loginMem != null && !loginMem.Equals("Admin"))
             {
                 Customer c = customerRepository.GetCustomerById(loginMemId);
-                if(c != null)
+                if (c != null)
                 {
                     CustomerModel.CustomerId = c.CustomerId;
                 }
                 CustomerModel = CusModel();
-              
+
 
                 //MessageBox.Show(lo)
                 return Page();
@@ -53,6 +54,33 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
                 };
             }
             return CustomerModel;
+        }
+
+        //update Profile
+        public IActionResult OnPost()
+        {
+            //MessageBox.Show(CustomerModel.CustomerName);
+
+            if (CustomerModel.CustomerName != null && CustomerModel.City != null && CustomerModel.Country != null)
+            {
+                var customerUpdate = new Customer()
+                {
+                    CustomerId= CustomerModel.CustomerId,
+                    CustomerName = CustomerModel.CustomerName,
+                    City = CustomerModel.City,
+                    Country = CustomerModel.Country,
+                    Birthday = CustomerModel.Birthday,
+                    Email = CustomerModel.Email,
+                };
+                customerRepository.Update(customerUpdate);
+                ViewData["MessageSuccess"] = "Update Successfully";
+            }
+            else
+            {
+                ViewData["MessageFailed"] = "PLease fill data";
+                return Page();
+            }
+            return Page();
         }
     }
 }

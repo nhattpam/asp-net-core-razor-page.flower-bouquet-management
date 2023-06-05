@@ -14,6 +14,7 @@
                 <th>Shipped Date</th>
                 <th>Total</th>
                 <th>Status</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,7 @@
                     <td>@item.ShippedDate</td>
                     <td>@item.Total</td>
                     <td>@item.OrderStatus</td>
+                    <td><a href="Detail/@item.OrderId">Detail</a></td>
                 </tr>
             }
         </tbody>

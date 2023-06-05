@@ -10,5 +10,7 @@ namespace Repository.OrderDetailRepo
     public interface IOrderDetailRepository
     {
         public IEnumerable<OrderDetail> GetFlowerBouquetById(int flowerBouquetID);
+
+        public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId);
     }
 }

@@ -1,0 +1,28 @@
+﻿@page "{id}"
+@model PhamMinhNhatRazorPages.Pages.Orders.DetailModel
+@{
+}
+<h1 class="mb-3">Detail Order</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>OrderId</th>
+            <th>Flower Bouquet</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Discount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrdeDetailModel)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.FlowerBouquet.FlowerBouquetName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.Quantity</td>
+                <td>@item.Discount</td>
+            </tr>
+        }
+    </tbody>
+</table>

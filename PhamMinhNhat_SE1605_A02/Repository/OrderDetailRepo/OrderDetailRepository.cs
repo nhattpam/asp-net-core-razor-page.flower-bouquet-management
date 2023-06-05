@@ -14,5 +14,9 @@ namespace Repository.OrderDetailRepo
         {
             return OrderDetailDAO.Instance.GetFlowerBouquetById(flowerBouquetID);
         }
+        public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId)
+        {
+            return OrderDetailDAO.Instance.GetOrderDetailByOrderId(orderId);
+        }
     }
 }

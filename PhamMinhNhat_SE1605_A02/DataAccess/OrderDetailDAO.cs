@@ -56,5 +56,26 @@ namespace DataAccess
             list = GetOrderDetails().Where(t => t.FlowerBouquetId== flowerBouquetID).ToList();
             return list;
         }
+
+        //orderdetail by orderid
+        public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId)
+        {
+            IEnumerable<OrderDetail> os = null;
+
+            try
+            {
+
+                var context = new FUFlowerBouquetManagementContext();
+                os = context.OrderDetails.Include(pro => pro.FlowerBouquet)
+                    .Where(c => c.OrderId == orderId);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return os;
+        }
     }
 }
