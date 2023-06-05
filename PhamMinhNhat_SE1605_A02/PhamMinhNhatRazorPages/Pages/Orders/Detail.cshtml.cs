@@ -24,11 +24,11 @@ namespace PhamMinhNhatRazorPages.Pages.Orders
         {
             //check admin or null
             string loginMem = HttpContext.Session.GetString("loginMem");
-            if (loginMem != null && loginMem.Equals("Admin"))
+            if (loginMem != null)
             {
                 orderViewModel.OrderId = id;
                 OrdeDetailModel = List();
-                MessageBox.Show(orderViewModel.OrderId.ToString());
+                //MessageBox.Show(orderViewModel.OrderId.ToString());
 
                 return Page();
             }
