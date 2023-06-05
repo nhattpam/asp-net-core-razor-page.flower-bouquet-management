@@ -5,39 +5,51 @@
 
 <div class="container" style="width: 24%; margin-top: 52px">
     <h2 class="text-center">ADD</h2>
-    <form method="post">
+    <form method="post" asp-page-handler="Add">
         <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example1">Id</label>
-            <input type="text" id="form2Example1" class="form-control"  />
+            <label class="form-label" for="form2Example1" >Id</label>
+            <input type="number" id="form2Example1" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetId" />
         </div>
 
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Name</label>
-            <input type="text" id="form2Example2" class="form-control" />
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetName"/>
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Description</label>
-            <input type="email" id="form2Example2" class="form-control" />
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.Description"/>
         </div>
         <div class="form-outline mb-4">
-            <input type="number" id="form2Example2" class="form-control" />
             <label class="form-label" for="form2Example2">Unit Price</label>
+            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitPrice"/>
         </div>
         <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Units In Stock</label>
-            <input type="number" id="form2Example2" class="form-control" />
+            <label class="form-label" for="form2Example2" >Units In Stock</label>
+            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitsInStock"/>
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Status</label>
-            <input type="tel" id="form2Example2" class="form-control" />
+            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetStatus" />
         </div>
+
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Category</label>
-            <input type="text" id="form2Example2" class="form-control" />
+            <select class="form-outline mb-4" id="form2Example2">
+                @foreach (var c in Model.OptionCategories)
+                {
+                    <option value="@c.CategoryId">@c.CategoryName</option>
+                }
+                
+            </select>
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Supplier</label>
-            <input type="text" id="form2Example2" class="form-control" />
+            <select class="form-outline mb-4" id="form2Example2">
+                @foreach (var s in Model.OptionSuppliers)
+                {
+                    <option value="@s.SupplierId">@s.SupplierName</option>
+                }
+            </select>
         </div>
 
         <!-- Submit button -->

@@ -1,16 +1,25 @@
+using BusinessObjects.Models;
 using DataAccess.Repository.FlowerBouquetRepo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.CategoryRepo;
 using Repository.SupplierRepo;
+using System.Windows;
+using ViewModel;
+using static NuGet.Packaging.PackagingConstants;
 
 namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
 {
     public class AddModel : PageModel
     {
+        public IEnumerable<CategoryViewModel> OptionCategories;
+        public IEnumerable<SupplierViewModel> OptionSuppliers;
         ICategoryRepository categoryRepository { get; set; }
         ISupplierRepository supplierRepository { get; set; }
         IFlowerBouquetRepository flowerBouquetRepository { get; set; }
+
+        [BindProperty]
+        public FlowerBouquetViewModel AddFlowerBouquet { get; set; }
 
         public AddModel()
         {
@@ -24,9 +33,64 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
             string loginMem = HttpContext.Session.GetString("loginMem");
             if (loginMem != null && loginMem.Equals("Admin"))
             {
+                OptionCategories = ListCates();
+                OptionSuppliers = ListSups();
                 return Page();
             }
             return RedirectToPage("/Index");
         }
+
+        public void OnPost() {
+            var flowerBouquet = new FlowerBouquet()
+            {
+                FlowerBouquetId = AddFlowerBouquet.FlowerBouquetId,
+                FlowerBouquetName = AddFlowerBouquet.FlowerBouquetName,
+                FlowerBouquetStatus = AddFlowerBouquet.FlowerBouquetStatus,
+                Description = AddFlowerBouquet.Description,
+                UnitPrice = AddFlowerBouquet.UnitPrice,
+                UnitsInStock = AddFlowerBouquet.UnitsInStock,
+                CategoryId = AddFlowerBouquet.CategoryId,
+                SupplierId = AddFlowerBouquet.SupplierId
+            };
+            MessageBox.Show("id: " + flowerBouquet.FlowerBouquetId
+                + "name: " + flowerBouquet.FlowerBouquetName
+                + "status: " + flowerBouquet.FlowerBouquetStatus
+                + "descrip: " + flowerBouquet.Description
+                + "price: " + flowerBouquet.UnitPrice
+                + "stock: " + flowerBouquet.UnitsInStock
+                + "category: " + flowerBouquet.CategoryId
+                + "supplier: " + flowerBouquet.SupplierId);
+        }
+
+        //option categories
+        public IEnumerable<CategoryViewModel> ListCates()
+        {
+            var categories = categoryRepository.GetCategoryList();
+            var dtos = categories.Select(ca => new CategoryViewModel()
+            {
+                CategoryId = ca.CategoryId,
+                CategoryName = ca.CategoryName,
+                CategoryDescription = ca.CategoryDescription
+
+            });
+
+            return dtos;
+        }
+        //option suppliers
+        public IEnumerable<SupplierViewModel> ListSups()
+        {
+            var suppliers = supplierRepository.GetSupplierList();
+            var dtos = suppliers.Select(ca => new SupplierViewModel()
+            {
+                SupplierId = ca.SupplierId,
+                SupplierName = ca.SupplierName,
+                SupplierAddress = ca.SupplierAddress,
+                Telephone = ca.Telephone
+
+            });
+
+            return dtos;
+        }
+
     }
 }

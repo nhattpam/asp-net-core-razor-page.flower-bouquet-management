@@ -63,13 +63,15 @@ namespace PhamMinhNhatRazorPages.Pages
                 }
                 else
                 {
+                    ViewData["loginFailed"] = "Khong tim thay tai khoan";
                     return RedirectToPage("/Index");
                 }
 
                 
 
             }
-           return RedirectToPage("/Index");
+            ViewData["loginFailed"] = "Khong tim thay tai khoan";
+            return RedirectToPage("/Index");
 
         }
     }
