@@ -5,7 +5,7 @@
 <h1 class="mb-3">List of Orders</h1>
 @if (Model.Orders != null && Model.Orders.Any())
 {
-    <table class="table">
+    <table class="table text-success">
         <thead>
             <tr>
                 <th>Id</th>
@@ -27,7 +27,7 @@
                     <td>@item.ShippedDate</td>
                     <td>@item.Total</td>
                     <td>@item.OrderStatus</td>
-                    <td><a href="Detail/@item.OrderId">Detail</a></td>
+                    <td><a class="btn btn-outline-dark" href="Detail/@item.OrderId">Detail</a></td>
                 </tr>
             }
         </tbody>

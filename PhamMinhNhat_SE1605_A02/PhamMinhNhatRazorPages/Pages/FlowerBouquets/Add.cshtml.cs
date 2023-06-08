@@ -12,8 +12,8 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
 {
     public class AddModel : PageModel
     {
-        public IEnumerable<CategoryViewModel> OptionCategories;
-        public IEnumerable<SupplierViewModel> OptionSuppliers;
+        public IEnumerable<CategoryViewModel> OptionCategories { get; set; }
+        public IEnumerable<SupplierViewModel> OptionSuppliers { get; set; }
         ICategoryRepository categoryRepository { get; set; }
         ISupplierRepository supplierRepository { get; set; }
         IFlowerBouquetRepository flowerBouquetRepository { get; set; }
@@ -40,7 +40,7 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
             return RedirectToPage("/Index");
         }
 
-        public void OnPost() {
+        public IActionResult OnPost() {
             var flowerBouquet = new FlowerBouquet()
             {
                 FlowerBouquetId = AddFlowerBouquet.FlowerBouquetId,
@@ -52,14 +52,40 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
                 CategoryId = AddFlowerBouquet.CategoryId,
                 SupplierId = AddFlowerBouquet.SupplierId
             };
-            MessageBox.Show("id: " + flowerBouquet.FlowerBouquetId
-                + "name: " + flowerBouquet.FlowerBouquetName
-                + "status: " + flowerBouquet.FlowerBouquetStatus
-                + "descrip: " + flowerBouquet.Description
-                + "price: " + flowerBouquet.UnitPrice
-                + "stock: " + flowerBouquet.UnitsInStock
-                + "category: " + flowerBouquet.CategoryId
-                + "supplier: " + flowerBouquet.SupplierId);
+            //MessageBox.Show("id: " + flowerBouquet.FlowerBouquetId
+            //    + "name: " + flowerBouquet.FlowerBouquetName
+            //    + "status: " + flowerBouquet.FlowerBouquetStatus
+            //    + "descrip: " + flowerBouquet.Description
+            //    + "price: " + flowerBouquet.UnitPrice
+            //    + "stock: " + flowerBouquet.UnitsInStock
+            //    + "category: " + flowerBouquet.CategoryId
+            //    + "supplier: " + flowerBouquet.SupplierId);
+            var flo = flowerBouquetRepository.GetFlowerBouquetsById(flowerBouquet.FlowerBouquetId);
+            if(flo != null)
+            {
+                OptionCategories = ListCates();
+                OptionSuppliers = ListSups();
+                ViewData["messageId"] = "Id Da ton tai";
+            }
+            if(flo == null)
+            {
+                if (flowerBouquet.FlowerBouquetName == null && flowerBouquet.Description == null
+                    && flowerBouquet.FlowerBouquetStatus > 1 && flowerBouquet.FlowerBouquetStatus < 0)
+                {
+                    ViewData["messageInput"] = "Lam on xem lai data";
+                    OptionCategories = ListCates();
+                    OptionSuppliers = ListSups();
+                }
+                else
+                {
+                    OptionCategories = ListCates();
+                    OptionSuppliers = ListSups();
+                    return RedirectToPage("/FlowerBouquets/Index");
+                }
+                
+            }
+            return Page();
+
         }
 
         //option categories

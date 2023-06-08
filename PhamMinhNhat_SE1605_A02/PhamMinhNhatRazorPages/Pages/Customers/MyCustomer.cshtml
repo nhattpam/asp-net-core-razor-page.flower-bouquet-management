@@ -6,7 +6,7 @@
 }
 @if (Model.CustomerModel != null)
 {
-    <div class="container" style="width: 24%; margin-top: 52px">
+    <div class="container text-success" style="width: 24%; margin-top: 52px">
         <h2 class="text-center">My Profile</h2>
 
         @*hien thi message*@
@@ -50,7 +50,7 @@
                 <input type="date" id="form2Example2" class="form-control" name="birthday" asp-for="CustomerModel.Birthday" />
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
+            <button type="submit" class="btn btn-warning btn-block mb-4">Save</button>
 
         </form>
     </div>

@@ -50,14 +50,12 @@ namespace PhamMinhNhatRazorPages.Pages
                     {
                         HttpContext.Session.SetString("loginMem", dto.CustomerName);
                         HttpContext.Session.SetString("loginMemId", dto.CustomerId.ToString());
-                        MessageBox.Show(dto.CustomerName);
                         return RedirectToPage("./AdminScreen");
                     }
                     else
                     {
                         HttpContext.Session.SetString("loginMem", dto.CustomerName);
                         HttpContext.Session.SetString("loginMemId", dto.CustomerId.ToString());
-                        MessageBox.Show(dto.CustomerName);
                         return RedirectToPage("./CustomerScreen");
                     }
                 }
