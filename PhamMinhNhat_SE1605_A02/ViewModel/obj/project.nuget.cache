@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TRKeUQP5B/KNH5QZZ23vyzbpcO/wHqFyvSNj91n/nFF4PWUQNxI75629mc07eo1PL7oYWPGy0TWItxgw7varEg==",
+  "dgSpecHash": "tAxzufHB2HyWtviZ3Hi5uquXLWddn2NrYkZcGQM7hs7JCIuMdqjZJiJklMWKmyF0oOQEgzx2c9amjFg6HjwD/g==",
   "success": true,
-  "projectFilePath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Assignments\\asp-net-core-razor-page.flower-bouquet-management\\Ass2\\PhamMinhNhat_SE1605_A02\\ViewModel\\ViewModel.csproj",
+  "projectFilePath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Assignments\\asp-net-core-razor-page.flower-bouquet-management\\PhamMinhNhat_SE1605_A02\\ViewModel\\ViewModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

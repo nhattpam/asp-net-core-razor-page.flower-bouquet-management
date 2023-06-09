@@ -31,5 +31,10 @@ namespace DataAccess.Repository.FlowerBouquetRepo
         {
             FlowerBouquetDAO.Instance.AddFlowerBouquet(flowerBouquet);
         }
+
+        public void Update(FlowerBouquet flower)
+        {
+            FlowerBouquetDAO.Instance.Update(flower);
+        }
     }
 }

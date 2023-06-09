@@ -45,45 +45,45 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
             {
                 FlowerBouquetId = AddFlowerBouquet.FlowerBouquetId,
                 FlowerBouquetName = AddFlowerBouquet.FlowerBouquetName,
-                FlowerBouquetStatus = AddFlowerBouquet.FlowerBouquetStatus,
+                FlowerBouquetStatus = 1,
                 Description = AddFlowerBouquet.Description,
                 UnitPrice = AddFlowerBouquet.UnitPrice,
                 UnitsInStock = AddFlowerBouquet.UnitsInStock,
                 CategoryId = AddFlowerBouquet.CategoryId,
                 SupplierId = AddFlowerBouquet.SupplierId
             };
-            //MessageBox.Show("id: " + flowerBouquet.FlowerBouquetId
-            //    + "name: " + flowerBouquet.FlowerBouquetName
-            //    + "status: " + flowerBouquet.FlowerBouquetStatus
-            //    + "descrip: " + flowerBouquet.Description
-            //    + "price: " + flowerBouquet.UnitPrice
-            //    + "stock: " + flowerBouquet.UnitsInStock
-            //    + "category: " + flowerBouquet.CategoryId
-            //    + "supplier: " + flowerBouquet.SupplierId);
-            var flo = flowerBouquetRepository.GetFlowerBouquetsById(flowerBouquet.FlowerBouquetId);
-            if(flo != null)
+
+            if (flowerBouquet.FlowerBouquetId == 0 || flowerBouquet.FlowerBouquetName == null
+                || flowerBouquet.Description == null || flowerBouquet.UnitPrice == 0
+                || flowerBouquet.UnitsInStock < 0)
             {
+
                 OptionCategories = ListCates();
                 OptionSuppliers = ListSups();
-                ViewData["messageId"] = "Id Da ton tai";
+                ViewData["messageInput"] = "Lam on nhap day du thong tin";
+
+
             }
-            if(flo == null)
+            else
             {
-                if (flowerBouquet.FlowerBouquetName == null && flowerBouquet.Description == null
-                    && flowerBouquet.FlowerBouquetStatus > 1 && flowerBouquet.FlowerBouquetStatus < 0)
+                var flowerAdd = flowerBouquetRepository.GetFlowerBouquetsById(flowerBouquet.FlowerBouquetId);
+                if (flowerAdd == null)
                 {
-                    ViewData["messageInput"] = "Lam on xem lai data";
-                    OptionCategories = ListCates();
-                    OptionSuppliers = ListSups();
+                    flowerBouquetRepository.AddFlowerBouquet(flowerBouquet);
+                    ViewData["messageId"] = "Da them thanh cong!";
+                    return RedirectToPage("Index");
                 }
                 else
                 {
-                    OptionCategories = ListCates();
-                    OptionSuppliers = ListSups();
-                    return RedirectToPage("/FlowerBouquets/Index");
+                    ViewData["messageInput"] = "Da trung ID!";
                 }
-                
+
             }
+
+
+            OptionCategories = ListCates();
+            OptionSuppliers = ListSups();
+
             return Page();
 
         }

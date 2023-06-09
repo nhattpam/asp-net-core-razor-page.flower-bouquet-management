@@ -131,5 +131,27 @@ namespace DataAccess
                 }
             
         }
+
+        public void Update(FlowerBouquet flower)
+        {
+            try
+            {
+                FlowerBouquet f = GetFlowerBouquet(flower.FlowerBouquetId);
+                if (f != null)
+                {
+                    var context = new FUFlowerBouquetManagementContext();
+                    context.Entry<FlowerBouquet>(flower).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

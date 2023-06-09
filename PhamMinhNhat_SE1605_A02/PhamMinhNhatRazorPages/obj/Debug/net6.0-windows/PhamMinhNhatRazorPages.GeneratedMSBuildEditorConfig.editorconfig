@@ -8,85 +8,85 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PhamMinhNhatRazorPages
 build_property.RootNamespace = PhamMinhNhatRazorPages
-build_property.ProjectDir = F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\asp-net-core-razor-page.flower-bouquet-management\Ass2\PhamMinhNhat_SE1605_A02\PhamMinhNhatRazorPages\
+build_property.ProjectDir = F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\asp-net-core-razor-page.flower-bouquet-management\PhamMinhNhat_SE1605_A02\PhamMinhNhatRazorPages\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\asp-net-core-razor-page.flower-bouquet-management\Ass2\PhamMinhNhat_SE1605_A02\PhamMinhNhatRazorPages
+build_property.MSBuildProjectDirectory = F:\FPT_SUBJECTS\Semester_7\PRN221\Assignments\asp-net-core-razor-page.flower-bouquet-management\PhamMinhNhat_SE1605_A02\PhamMinhNhatRazorPages
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/AdminScreen.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/AdminScreen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5TY3JlZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/CustomerScreen.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/CustomerScreen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJTY3JlZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Customers/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Customers/MyCustomer.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Customers/MyCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXE15Q3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Error.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Add.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmxvd2VyQm91cXVldHNcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Delete.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmxvd2VyQm91cXVldHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Edit.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmxvd2VyQm91cXVldHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/FlowerBouquets/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmxvd2VyQm91cXVldHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Logout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/Detail.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/MyOrder.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Orders/MyOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXE15T3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Privacy.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/_ViewImports.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/_ViewStart.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/Ass2/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Shared/_Layout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Assignments/asp-net-core-razor-page.flower-bouquet-management/PhamMinhNhat_SE1605_A02/PhamMinhNhatRazorPages/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8xl3r7vzyu

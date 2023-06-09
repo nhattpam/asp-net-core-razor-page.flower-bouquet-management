@@ -10,7 +10,7 @@
 
     @if (!string.IsNullOrWhiteSpace(messageId))
     {
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-success" role="alert">
             @messageId
         </div>
     }
@@ -24,7 +24,7 @@
     <form method="post" >
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1" >Id</label>
-            <input type="number" id="form2Example1" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetId" />
+            <input type="number" id="form2Example1" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetId" min="0"/>
         </div>
 
         <div class="form-outline mb-4">
@@ -37,15 +37,11 @@
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Unit Price</label>
-            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitPrice"/>
+            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitPrice" min="0"/>
         </div>
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2" >Units In Stock</label>
-            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitsInStock"/>
-        </div>
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Status</label>
-            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.FlowerBouquetStatus" />
+            <input type="number" id="form2Example2" class="form-control" asp-for="AddFlowerBouquet.UnitsInStock" min="0"/>
         </div>
         @if(Model.OptionCategories != null && Model.OptionCategories.Any())
         {

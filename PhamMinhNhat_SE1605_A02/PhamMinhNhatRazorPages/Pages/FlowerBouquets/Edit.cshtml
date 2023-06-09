@@ -1,55 +1,78 @@
-﻿@page "{id:int}"
+﻿@page "{id}"
 @model PhamMinhNhatRazorPages.Pages.FlowerBouquets.EditModel
 @{
+    var messageInput = ViewData["messageInput"]?.ToString();
+    var messageAdd = ViewData["messageAdd"]?.ToString();
 }
-
 <div class="container" style="width: 24%; margin-top: 52px">
-    <h2 class="text-center">Flower Bouquet Infor</h2>
+    <h2 class="text-center">Edit</h2>
+
+    @if (!string.IsNullOrWhiteSpace(messageInput))
+    {
+        <div class="alert alert-danger" role="alert">
+            @messageInput
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace(messageAdd))
+    {
+        <div class="alert alert-success" role="alert">
+            @messageAdd
+        </div>
+    }
+
     <form method="post">
-        <!-- Email input -->
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1">Id</label>
-            <input type="text" id="form2Example1" class="form-control"  readonly />
+            <input type="number" id="form2Example1" class="form-control" asp-for="EditFlowerBouquet.FlowerBouquetId" min="0" readonly />
         </div>
 
-        <!-- Password input -->
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Name</label>
-            <input type="text" id="form2Example2" class="form-control"  />
+            <input type="text" id="form2Example2" class="form-control" asp-for="EditFlowerBouquet.FlowerBouquetName" />
         </div>
-        <!-- Password input -->
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Description</label>
-            <input type="email" id="form2Example2" class="form-control"  />
+            <input type="text" id="form2Example2" class="form-control" asp-for="EditFlowerBouquet.Description" />
         </div>
-        <!-- Password input -->
         <div class="form-outline mb-4">
-            <input type="number" id="form2Example2" class="form-control" />
             <label class="form-label" for="form2Example2">Unit Price</label>
+            <input type="number" id="form2Example2" class="form-control" asp-for="EditFlowerBouquet.UnitPrice" min="0" />
         </div>
-        <!-- Password input -->
         <div class="form-outline mb-4">
             <label class="form-label" for="form2Example2">Units In Stock</label>
-            <input type="number" id="form2Example2" class="form-control"  />
-        </div>
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Status</label>
-            <input type="tel" id="form2Example2" class="form-control"  />
-        </div>
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Category</label>
-            <input type="text" id="form2Example2" class="form-control" />
-        </div>
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Supplier</label>
-            <input type="text" id="form2Example2" class="form-control" />
+            <input type="number" id="form2Example2" class="form-control" asp-for="EditFlowerBouquet.UnitsInStock" min="0" />
         </div>
 
+        @if (Model.OptionCategories != null && Model.OptionCategories.Any())
+        {
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example2">Category</label>
+                <select class="form-outline mb-4" id="form2Example2" asp-for="EditFlowerBouquet.CategoryId">
+                    @foreach (var c in Model.OptionCategories)
+                    {
+                        <option value="@c.CategoryId">@c.CategoryName</option>
+                    }
+
+                </select>
+            </div>
+        }
+        @if (Model.OptionSuppliers != null && Model.OptionSuppliers.Any())
+        {
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example2">Supplier</label>
+                <select class="form-outline mb-4" id="form2Example2" asp-for="EditFlowerBouquet.SupplierId">
+                    @foreach (var s in Model.OptionSuppliers)
+                    {
+                        <option value="@s.SupplierId">@s.SupplierName</option>
+                    }
+                </select>
+            </div>
+        }
+
+
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Edit</button>
+        <a href="/Flowers/List" class="btn btn-outline-danger btn-block mb-4">Cancel</a>
 
     </form>
 </div>
