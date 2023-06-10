@@ -53,14 +53,14 @@ namespace PhamMinhNhatRazorPages.Pages.FlowerBouquets
                 SupplierId = AddFlowerBouquet.SupplierId
             };
 
-            if (flowerBouquet.FlowerBouquetId == 0 || flowerBouquet.FlowerBouquetName == null
-                || flowerBouquet.Description == null || flowerBouquet.UnitPrice == 0
+            if (flowerBouquet.FlowerBouquetId == 0 || string.IsNullOrWhiteSpace(flowerBouquet.FlowerBouquetName)
+                || string.IsNullOrWhiteSpace(flowerBouquet.Description) || flowerBouquet.UnitPrice == 0
                 || flowerBouquet.UnitsInStock < 0)
             {
 
                 OptionCategories = ListCates();
                 OptionSuppliers = ListSups();
-                ViewData["messageInput"] = "Lam on nhap day du thong tin";
+                ViewData["messageInput"] = "Lam on nhap day du thong tin va khong chua khoang trang";
 
 
             }

@@ -61,7 +61,11 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
         {
             //MessageBox.Show(CustomerModel.CustomerName);
 
-            if (CustomerModel.CustomerName != null && CustomerModel.City != null && CustomerModel.Country != null && CustomerModel.Birthday != null)
+            if (!string.IsNullOrWhiteSpace(CustomerModel.CustomerName)
+                    && !string.IsNullOrWhiteSpace(CustomerModel.Country)
+                    && !string.IsNullOrWhiteSpace(CustomerModel.City)
+                    && !string.IsNullOrWhiteSpace(CustomerModel.Email)
+                    && CustomerModel.Birthday != null)
             {
                 var customerUpdate = new Customer()
                 {
@@ -97,7 +101,7 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
             }
             else
             {
-                ViewData["MessageFailed"] = "PLease fill data";
+                ViewData["MessageFailed"] = "PLease fill data va khong chua khoang trang";
                 return Page();
             }
             return Page();

@@ -47,11 +47,13 @@ namespace PhamMinhNhatRazorPages.Pages
             if (cusInDB == null)
             {
                 //check null
-                if (AddCustomer.CustomerName != null && AddCustomer.Country != null
-                    && AddCustomer.Birthday != null && AddCustomer.City != null
-                    && AddCustomer.Password != null)
+                if (!string.IsNullOrWhiteSpace(AddCustomer.CustomerName)
+                    && !string.IsNullOrWhiteSpace(AddCustomer.Country)
+                    && !string.IsNullOrWhiteSpace(AddCustomer.City)
+                    && !string.IsNullOrWhiteSpace(AddCustomer.Password)
+                    && !string.IsNullOrWhiteSpace(AddCustomer.Email)
+                    && AddCustomer.Birthday != null)
                 {
-
                     var cusEmailInDB = customerRepository.GetCustomerByEmail(AddCustomer.Email);
                     if (cusEmailInDB == null)
                     {
@@ -65,7 +67,7 @@ namespace PhamMinhNhatRazorPages.Pages
                 }
                 else
                 {
-                    ViewData["MessageFailed"] = "Lam on nhap day du du lieu";
+                    ViewData["MessageFailed"] = "Lam on nhap day du du lieu va khong chua khoang trang";
                 }
                 
 
