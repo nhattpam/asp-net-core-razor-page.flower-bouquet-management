@@ -20,5 +20,7 @@ namespace Repository.CustomerRepo
         public void DeleteCustomer(int id);
         public void AddCustomer(Customer c);
         public void Update(Customer c);
+
+        public Customer GetCustomerByEmail(string email);
     }
 }

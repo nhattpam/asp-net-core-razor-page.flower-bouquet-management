@@ -44,5 +44,9 @@ namespace Repository.CustomerRepo
         {
             return CustomerDAO.Instance.GetCustomerByName(customerName);
         }
+        public Customer GetCustomerByEmail(string email)
+        {
+            return CustomerDAO.Instance.GetCustomerByEmail(email);
+        }
     }
 }

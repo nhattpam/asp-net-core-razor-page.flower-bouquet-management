@@ -72,8 +72,28 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
                     Birthday = CustomerModel.Birthday,
                     Email = CustomerModel.Email,
                 };
-                customerRepository.Update(customerUpdate);
-                ViewData["MessageSuccess"] = "Update Successfully";
+                var customerHasEmail = customerRepository.GetCustomerByEmail(customerUpdate.Email);
+                var customerById = customerRepository.GetCustomerById(Int32.Parse(HttpContext.Session.GetString("loginMemId")));
+                //neu khong ton tai trong db thi update
+                if (customerHasEmail == null)
+                {
+                    customerRepository.Update(customerUpdate);
+                    ViewData["MessageSuccess"] = "Update Successfully";
+                } else
+                {
+                    if (customerById.Email.Equals(CustomerModel.Email))
+                    {
+                        customerRepository.Update(customerUpdate);
+                        ViewData["MessageSuccess"] = "Update Successfully";
+                    }
+                    else
+                    {
+                        ViewData["MessageFailed"] = "Email da ton tai";
+                    }
+                }
+               
+               
+                
             }
             else
             {

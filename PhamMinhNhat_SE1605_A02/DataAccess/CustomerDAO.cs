@@ -205,5 +205,25 @@ namespace DataAccess
             return cus;
         }
 
+        //check customer id by name
+        public Customer GetCustomerByEmail(string email)
+        {
+            Customer cus = null;
+
+            try
+            {
+
+                var context = new FUFlowerBouquetManagementContext();
+                cus = context.Customers.SingleOrDefault(f => f.Email.Equals(email.Trim()));
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return cus;
+        }
+
     }
 }
