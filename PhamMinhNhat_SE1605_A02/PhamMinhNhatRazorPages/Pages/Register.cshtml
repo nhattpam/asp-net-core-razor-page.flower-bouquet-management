@@ -1,5 +1,60 @@
 ﻿@page
 @model PhamMinhNhatRazorPages.Pages.RegisterModel
 @{
+    var MessageFailed = ViewData["MessageFailed"]?.ToString();
+    var MessageSuccess = ViewData["MessageSuccess"]?.ToString();
 }
 
+<div class="container text-success" style="width: 24%; margin-top: 52px">
+    <h2 class="text-center">Sign up</h2>
+
+    @*hien thi message*@
+    @if (!string.IsNullOrWhiteSpace(MessageFailed))
+    {
+        <div class="alert alert-danger" role="alert">
+            @MessageFailed
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace(MessageSuccess))
+    {
+        <div class="alert alert-success" role="alert">
+            @MessageSuccess
+        </div>
+    }
+
+    <form method="post" asp-page-handler="Register">
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example1">Email address</label>
+            <input type="email" id="form2Example1" class="form-control" asp-for="AddCustomer.Email" />
+        </div>
+
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example2">Password</label>
+            <input type="password" id="form2Example2" class="form-control" asp-for="AddCustomer.Password" />
+        </div>
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example2">Name</label>
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddCustomer.CustomerName" />
+        </div>
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example2">Country</label>
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddCustomer.Country" />
+        </div>
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example2">City</label>
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddCustomer.City" />
+        </div>
+        <div class="form-outline mb-8">
+            <label class="form-label" for="form2Example2">Birthday</label>
+            <input type="date" id="form2Example2" class="form-control" asp-for="AddCustomer.Birthday" />
+        </div>
+
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-success btn-block">Sign up</button>
+
+    </form>
+    <div class="container">
+        <a href="/Index">Already have an account? Login</a>
+    </div>
+</div>

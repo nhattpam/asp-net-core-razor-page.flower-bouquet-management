@@ -30,7 +30,7 @@ namespace PhamMinhNhatRazorPages.Pages.Orders
         public IEnumerable<OrderViewModel> List()
         {
             var orders = orderRepository.GetOrdersList();
-
+            DateTime dateTime = DateTime.Now;
             var dtos = orders.Select(oo => new OrderViewModel()
             {
                 OrderId = oo.OrderId,

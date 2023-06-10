@@ -29,5 +29,11 @@ namespace ViewModel
 
         public virtual ICollection<Order> Orders { get; set; }
 
+        public override string? ToString()
+        {
+            return "Email: " + Email + "Pass: " + Password +
+                "Name: " + CustomerName + "Country: " + Country
+                + "City: " + City + "Birthday: " + Birthday + "ID: " + CustomerId;
+        }
     }
 }

@@ -61,7 +61,7 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
         {
             //MessageBox.Show(CustomerModel.CustomerName);
 
-            if (CustomerModel.CustomerName != null && CustomerModel.City != null && CustomerModel.Country != null)
+            if (CustomerModel.CustomerName != null && CustomerModel.City != null && CustomerModel.Country != null && CustomerModel.Birthday != null)
             {
                 var customerUpdate = new Customer()
                 {
