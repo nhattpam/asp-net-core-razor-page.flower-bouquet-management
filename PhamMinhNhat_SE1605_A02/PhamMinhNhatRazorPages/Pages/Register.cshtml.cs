@@ -52,7 +52,8 @@ namespace PhamMinhNhatRazorPages.Pages
                     && !string.IsNullOrWhiteSpace(AddCustomer.City)
                     && !string.IsNullOrWhiteSpace(AddCustomer.Password)
                     && !string.IsNullOrWhiteSpace(AddCustomer.Email)
-                    && AddCustomer.Birthday != null)
+                    && AddCustomer.Birthday != null
+                    && AddCustomer.Birthday <= DateTime.Now)
                 {
                     var cusEmailInDB = customerRepository.GetCustomerByEmail(AddCustomer.Email);
                     if (cusEmailInDB == null)
@@ -67,7 +68,7 @@ namespace PhamMinhNhatRazorPages.Pages
                 }
                 else
                 {
-                    ViewData["MessageFailed"] = "Lam on nhap day du du lieu va khong chua khoang trang";
+                    ViewData["MessageFailed"] = "Lam on nhap day du du lieu va khong chua khoang trang hoac xem lai birthday";
                 }
                 
 

@@ -65,7 +65,8 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
                     && !string.IsNullOrWhiteSpace(CustomerModel.Country)
                     && !string.IsNullOrWhiteSpace(CustomerModel.City)
                     && !string.IsNullOrWhiteSpace(CustomerModel.Email)
-                    && CustomerModel.Birthday != null)
+                    && CustomerModel.Birthday != null
+                    && CustomerModel.Birthday <= DateTime.Now)
             {
                 var customerUpdate = new Customer()
                 {
@@ -101,7 +102,7 @@ namespace PhamMinhNhatRazorPages.Pages.Customers
             }
             else
             {
-                ViewData["MessageFailed"] = "PLease fill data va khong chua khoang trang";
+                ViewData["MessageFailed"] = "PLease fill data va khong chua khoang trang, hoac xem lai birthday";
                 return Page();
             }
             return Page();
